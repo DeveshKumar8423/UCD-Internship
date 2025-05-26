@@ -1,0 +1,91 @@
+FR,The system shall filter data by: Venues and Key Events.,F
+FR,The system shall allow a user to define the time segments,F
+FR,The system shall display the local and exercise time in separate clocks,F
+FR,The system shall offer the ability to pause and resume the refresh of data.,F
+FR,The system shall provide charts for the Activity or Event actual versus assumed time.,F
+FR,The system shall provide a history report of changes made to the Activity or Event data,F
+NFR,The look and feel of the system shall conform to the user interface standards of the smart device.,LF
+NFR, The user interface shall have standard menus  buttons for navigation,LF
+NFR,The system shall have a professional appearance,LF
+NFR,The product shall have a consistent color scheme and fonts.,LF
+NFR,The system shall be used by realtors with no training.,US
+NFR,The system shall be intuitive and self explanatory.,US
+NFR,The product shall be easy for a realtor to learn.,US
+NFR,The product shall use symbols and words that are naturally understandable by the realtor community.,US
+NFR,The product shall produce search results in an acceptable time,PE
+NFR,The search results shall be returned no later 30      seconds  after the user has entered the search criteria,PE
+NFR,The product shall generate a CMA report in an acceptable time.,PE
+NFR,The CMA report shall be returned no later 60 seconds after the user has entered the CMA report criteria.,PE
+NFR,The product shall synchronize contacts and appointments in an acceptable time.,PE
+NFR,The product shall synchronize with the office system every hour.,PE
+NFR, The product shall be available for use 24 hours per day  365 days  per year,A
+NFR, Out of 1000 accesses to the system  the system is available 999 times.,A
+NFR,The product shall operate in offline mode whenever internet connection is unavailable.,FT
+NFR, The product shall allow the user to view previously downloaded search results  CMA reports  and appointments.,FT
+NFR,The product shall retain user preferences in the event of a failure.,FT
+NFR,100% of saved user preferences shall be restored when system comes back online.,FT
+NFR,The product shall be able to support multiple remote users,SC
+NFR,The product shall be able support 1000 simultaneous users.,SC
+NFR,The product shall be capable of handling the existing 1000 users. This number is expected to grow 5 times within the next year.,SC
+NFR,The product shall be installed by an untrained realtor   without recourse to separately-printed instructions.,US
+NFR,90% of untrained realtors shall be able to install the product on their device without printed instructions,US
+NFR,The product is expected to run on Windows CE and Palm operating systems.,PO
+NFR,Only registered realtors shall be able to access the system.,SE
+NFR,Every user of the system shall be authenticated and authorized.,SE
+NFR,The product shall prevent its data from incorrect data being introduced.,SE
+FR,The system shall allow a real estate agent to query MLS information,F
+FR,The user shall be able to get driving directions to a selected property,F
+FR,The user shall be able to download appointments and contact information for clients,F
+FR,The system shall display clear property images in the search results,F
+FR,The system shall update or create new property listings in the MLS,F
+FR,Realtor shall be able to generate a CMA report based on property criteria,F
+FR,The system shall be able to call the seller or buyer to schedule an appointment,F
+FR,The realtor shall be notified of new client appointments after automatic synchronization with office system,F
+FR,The realtor shall be able to retrieve a map showing property locations for a specified area,F
+FR,The system shall notify the realtor when a seller or buyer responds to an appointment request,F
+FR,The product shall allow the user to save the property search results.,F
+NFR,The system shall be easy to use by the Program Administrators/Nursing Staff Members.,US
+NFR,All of the users shall be able to use the system after one day of training.,US
+NFR,The system shall help the user avoid making mistakes while scheduling classes and clinicals for the nursing students.,US
+NFR,The number of mistakes noted by the students shall be decreased by 50% in the first year.,US
+NFR,All additions of new users and modifications to user�s access shall be recorded on the User Report.,SE
+NFR, If a user account is revoked  it can only be re-instantiated by the System Administrator.,SE
+NFR,Only the System Administrator shall be able to reset a revoked user logon account,SE
+NFR,The Disputes application shall manipulate and view business data. Users will not have direct access to data files or databases.,SE
+NFR,All updates to data files or database must be initiated from the Disputes System.,SE
+NFR,The Disputes application must conform to the legal requirements as specified by the Merchant Operating Regulations.,L
+NFR,All business rules specified in the Disputes System shall be in compliance with the Merchant Operating Regulations.,L
+NFR,The Disputes application must conform to the legal requirements as specified by Regulation E and Regulation Z that govern credit card disputes processing.,L
+NFR,All business rules specified in the Disputes System shall be in compliance to the guidelines of Regulation E and Regulation Z.,L
+NFR,The Disputes application must maintain a detailed history of every action that a user takes on a dispute case.  This ensures a complete audit trail if questions arise later on with regard to a particular dispute case.,L
+NFR,All actions that modify an existing dispute case must be recorded in the case history.,L
+FR,The Disputes System must be accessible by both internal and external users.,F
+FR,The Disputes System must prevent users from accessing any dispute cases that do not belong to their cardholder base.,F
+FR,The Disputes System will facilitate direct data entry of a dispute case via a user interface that supports real time responses to the users.,F
+NFR,The product shall comply with corporate User Interface Guidelines,LF
+NFR,The product shall comply with corporate color scheme,LF
+NFR,The appearance of the product shall appear professional,LF
+NFR,The product shall be easy to use by Adjusters and Collision Estimators.  95% of Adjusters and Collision Estimators shall find the product easy to use.,US
+NFR,The product shall increase productivity of Collision Estimators. 80% of the Collision Estimators shall agree their productivity has increase within 1 month of using the product.,US
+NFR,Users shall feel satisfied using the product.  85% of all users will be satisfied with the product.,US
+NFR,The product shall be easy to learn by Adjusters and Collision Estimators.  The product shall be learned with two days onsite training,US
+NFR,The user shall easily locate instructions while using the product.  User help can be found within 90% of the system.,US
+NFR,The search for recycled parts shall take no longer than 15 seconds.  The search results shall be returned in under 15 seconds.,PE
+NFR,The search for the preferred repair facility shall take no longer than 8 seconds.  The preferred repair facility is returned within 8 seconds,PE
+FR, The system shall resolve the zipcode for the street address  city  and state if zipcode is unknown.,F
+FR,The search radius shall be between 1 and 30 miles,F
+FR,The system shall locate the preferred repair facility with the highest ratings for the input criteria,F
+FR,The adjuster shall enter the preferred repair facility on the estimate assignment.,F
+FR,The adjuster shall be able to override the preferred repair facitlity on the estimate assignment.,F
+FR,The preferred repair facility shall be returned to the user.,F
+FR,The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined.,F
+FR,The estimator shall search for available recycled parts using damaged vehicle parts information.,F
+FR,The estimator shall search for available recycled parts using a list of preferred parts suppliers.,F
+FR,The system shall search for available recycled parts for the supplied vehicle parts and suppliers.,F
+FR,The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers,F
+FR,The system shall retain the available recycled parts and suppliers returned from the search.,F
+FR,The available recycled parts information and their suppliers shall be returned to the user.,F
+FR,The estimator shall apply selected recycled parts to the collision estimate.,F
+FR,The estimator shall not apply recycled parts to the collision estimate if no available parts are returned.,F
+FR,The adjuster shall review the collision estimate.,F
+FR,The adjuster shall request a recycled parts audit of the collision estimate.,F

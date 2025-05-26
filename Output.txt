@@ -1,0 +1,796 @@
+﻿(base) a1@MacBook-Pro-3 UCD-Internship % /usr/local/bin/python3 /Users/a1/Documents/GitHub/UCD-Internship/promise_clas
+sifier.py
+Successfully loaded train.txt
+Successfully loaded traind.txt
+Successfully loaded test.txt
+Successfully loaded testd.txt
+
+
+Training samples: 1106
+Test samples: 174
+Label distribution in test set:
+label
+NF    101
+F      73
+Name: count, dtype: int64
+[codecarbon WARNING @ 09:17:02] Multiple instances of codecarbon are allowed to run at the same time.
+[codecarbon WARNING @ 09:17:02] Error while trying to count physical CPUs: [Errno 2] No such file or directory: 'lscpu'. Defaulting to 1.
+[codecarbon INFO @ 09:17:02] [setup] RAM Tracking...
+[codecarbon INFO @ 09:17:02] [setup] CPU Tracking...
+Password:
+[codecarbon INFO @ 09:17:09] Tracking Apple CPU and GPU via PowerMetrics
+[codecarbon INFO @ 09:17:14] [setup] GPU Tracking...
+[codecarbon INFO @ 09:17:14] No GPU found.
+[codecarbon INFO @ 09:17:14] The below tracking methods have been set up:
+                RAM Tracking Method: RAM power estimation model
+                CPU Tracking Method: PowerMetrics
+                GPU Tracking Method: PowerMetrics
+            
+[codecarbon INFO @ 09:17:14] >>> Tracker's metadata:
+[codecarbon INFO @ 09:17:14]   Platform system: macOS-15.3-x86_64-i386-64bit-Mach-O
+[codecarbon INFO @ 09:17:14]   Python version: 3.13.0
+[codecarbon INFO @ 09:17:14]   CodeCarbon version: 3.0.1
+[codecarbon INFO @ 09:17:14]   Available RAM : 32.000 GB
+[codecarbon INFO @ 09:17:14]   CPU count: 8 thread(s) in 1 physical CPU(s)
+[codecarbon INFO @ 09:17:14]   CPU model: Intel(R) Core(TM) i7-1068NG7 CPU @ 2.30GHz
+[codecarbon INFO @ 09:17:14]   GPU count: 1
+[codecarbon INFO @ 09:17:14]   GPU model: Intel(R) Core(TM) i7-1068NG7 CPU @ 2.30GHz
+[codecarbon INFO @ 09:17:18] Emissions data (if any) will be saved to file /Users/a1/Documents/GitHub/UCD-Internship/emissions/emissions.csv
+[codecarbon INFO @ 09:17:19] Energy consumed for RAM : 0.000006 kWh. RAM Power : 20.0 W
+[codecarbon INFO @ 09:17:20] Energy consumed for RAM : 0.000017 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:20] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon WARNING @ 09:17:21] Background scheduler didn't run for a long period (3s), results might be inaccurate
+[codecarbon INFO @ 09:17:21] Energy consumed for RAM : 0.000033 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:21] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:22] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:17:22] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:17:22] Energy consumed for RAM : 0.000035 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:23] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:23] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:17:23] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:17:23] Energy consumed for RAM : 0.000037 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:23] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:24] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:17:24] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:17:24] Energy consumed for RAM : 0.000038 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:24] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:25] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:17:25] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:17:25] Energy consumed for RAM : 0.000040 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:25] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:26] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:17:26] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:17:26] Energy consumed for RAM : 0.000041 kWh. RAM Power : 20.0 W
+^C[codecarbon WARNING @ 09:17:26] Returncode while logging power values using Powermetrics: -2
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:17:26] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:06:56] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:06:56] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:06:57] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:06:57] Energy consumed for RAM : 0.001875 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:06:57] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:06:57] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:06:58] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:06:58] Energy consumed for RAM : 0.001880 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:06:58] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:06:58] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:06:58] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:06:59] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:06:59] Energy consumed for RAM : 0.001886 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:06:59] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:06:59] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:00] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:00] Energy consumed for RAM : 0.001891 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:00] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:00] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:01] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:01] Energy consumed for RAM : 0.001896 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:01] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:01] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:02] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:02] Energy consumed for RAM : 0.001901 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:02] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:02] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:03] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:03] Energy consumed for RAM : 0.001906 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:03] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:03] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:04] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:04] Energy consumed for RAM : 0.001912 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:04] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:04] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:05] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:05] Energy consumed for RAM : 0.001917 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:05] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:05] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:06] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:06] Energy consumed for RAM : 0.001922 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:06] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:06] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:06] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:07] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:07] Energy consumed for RAM : 0.001927 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:07] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:07] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:08] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:08] Energy consumed for RAM : 0.001932 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:08] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:08] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:09] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:09] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:09] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:09] Energy consumed for RAM : 0.001932 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:10] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:10] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:10] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:10] Energy consumed for RAM : 0.001933 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:11] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:11] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:11] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:11] Energy consumed for RAM : 0.001933 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:12] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:12] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:12] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:12] Energy consumed for RAM : 0.001934 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:13] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:13] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:13] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:13] Energy consumed for RAM : 0.001934 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:14] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:14] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:14] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:14] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:14] Energy consumed for RAM : 0.001935 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:15] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:15] Energy consumed for RAM : 0.001941 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:15] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:15] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:16] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:16] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:16] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:16] Energy consumed for RAM : 0.001941 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:17] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:17] Energy consumed for RAM : 0.001947 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:17] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:17] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:18] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:18] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:18] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:18] Energy consumed for RAM : 0.001947 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:19] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:19] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:19] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:19] Energy consumed for RAM : 0.001948 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:20] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:20] Energy consumed for RAM : 0.001953 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:20] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:20] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:21] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:21] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:21] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:21] Energy consumed for RAM : 0.001954 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:22] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:22] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:22] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:22] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:22] Energy consumed for RAM : 0.001954 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:23] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:23] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:23] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:23] Energy consumed for RAM : 0.001955 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:24] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:24] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:24] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:24] Energy consumed for RAM : 0.001956 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:25] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:25] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:25] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:25] Energy consumed for RAM : 0.001956 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:26] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:26] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:26] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:26] Energy consumed for RAM : 0.001957 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:27] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:27] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:27] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:27] Energy consumed for RAM : 0.001957 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:28] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:28] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:28] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:28] Energy consumed for RAM : 0.001958 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:29] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:29] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:29] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:29] Energy consumed for RAM : 0.001958 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:30] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:30] Energy consumed for RAM : 0.001964 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:30] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:30] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:30] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:31] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:31] Energy consumed for RAM : 0.001969 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:31] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:31] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:32] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:32] Energy consumed for RAM : 0.001974 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:32] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:32] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:33] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:33] Energy consumed for RAM : 0.001980 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:33] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:33] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:34] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:34] Energy consumed for RAM : 0.001985 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:34] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:34] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:35] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:35] Energy consumed for RAM : 0.001991 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:35] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:35] nan kWh of electricity used since the beginning.
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:36] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:36] Energy consumed for RAM : 0.001996 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:36] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:36] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:37] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:37] Energy consumed for RAM : 0.002001 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:37] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:37] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:38] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:38] Energy consumed for RAM : 0.002007 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:38] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:38] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:38] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:39] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:39] Energy consumed for RAM : 0.002012 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:39] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:39] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:40] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:40] Energy consumed for RAM : 0.002018 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:41] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:41] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:41] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:41] Energy consumed for RAM : 0.002023 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:41] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:41] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:42] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:42] Energy consumed for RAM : 0.002028 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:42] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:42] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:43] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:43] Energy consumed for RAM : 0.002034 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:43] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:43] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:44] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:44] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:44] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:44] Energy consumed for RAM : 0.002034 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:45] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:45] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:45] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:45] Energy consumed for RAM : 0.002034 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:46] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:46] Energy consumed for RAM : 0.002039 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:47] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:47] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:47] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:47] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:47] Energy consumed for RAM : 0.002045 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:48] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:48] nan kWh of electricity used since the beginning.
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:48] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:48] Energy consumed for RAM : 0.002050 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:49] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:49] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:49] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:50] Energy consumed for RAM : 0.002056 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:50] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:50] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:50] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:51] Energy consumed for RAM : 0.002061 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:51] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:51] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:51] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:52] Energy consumed for RAM : 0.002067 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:52] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:52] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:52] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:52] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:52] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:53] Energy consumed for RAM : 0.002067 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:53] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+[codecarbon INFO @ 09:07:53] Energy consumed for RAM : 0.002072 kWh. RAM Power : 20.0 W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:54] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:54] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:54] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:55] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:55] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:55] nan g.CO2eq/s mean an estimation of nan kg.CO2eq/year
+[codecarbon INFO @ 09:07:55] Energy consumed for all CPUs : nan kWh. Total CPU Power : nan W
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+[codecarbon INFO @ 09:07:55] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:55] nan kWh of electricity used since the beginning.
+[codecarbon INFO @ 09:07:56] Energy consumed for all GPUs : nan kWh. Total GPU Power : nan W
+[codecarbon INFO @ 09:07:56] nan kWh of electricity used since the beginning.
+
+
+Classification Report:
+                                                  text true_label pred_label  match
+2    The system shall display the local and exercis...          F          F   True
+3    The system shall offer the ability to pause an...          F          F   True
+24   The product shall retain user preferences in t...         NF          F  False
+26   The product shall be able to support multiple ...         NF          F  False
+33   Every user of the system shall be authenticate...         NF          F  False
+34   The product shall prevent its data from incorr...         NF          F  False
+35   The system shall allow a real estate agent to ...          F          F   True
+36   The user shall be able to get driving directio...          F          F   True
+43   The realtor shall be able to retrieve a map sh...          F          F   True
+46   The system shall be easy to use by the Program...         NF          F  False
+52   Only the System Administrator shall be able to...         NF          F  False
+69   Users shall feel satisfied using the product. ...         NF          F  False
+87   The estimator shall apply selected recycled pa...          F          F   True
+90   The adjuster shall request a recycled parts au...          F          F   True
+94   The system shall link Events back to either th...          F          F   True
+95   The system shall allow modification of the dis...          F          F   True
+97   The system shall filter data by: Venues and Ke...          F          F   True
+99   The system shall display the local and exercis...          F          F   True
+101  The system shall provide charts for the Activi...          F          F   True
+107  The system shall be used by realtors with no t...         NF          F  False
+123  The product shall be able to support multiple ...         NF          F  False
+126  The product shall be installed by an untrained...         NF          F  False
+132  The system shall allow a real estate agent to ...          F          F   True
+135  The system shall display clear property images...          F          F   True
+139  The realtor shall be notified of new client ap...          F          F   True
+140  The realtor shall be able to retrieve a map sh...          F          F   True
+143  The system shall be easy to use by the Program...         NF          F  False
+145  The system shall help the user avoid making mi...         NF          F  False
+146  The number of mistakes noted by the students s...         NF          F  False
+147  The system shall be intuitive to the Program A...         NF          F  False
+151  Staff members shall be able to complete a set ...         NF          F  False
+155  system shall be able to handle all of the user...         NF          F  False
+158  The system will use the stored e-mail addresse...          F          F   True
+171  The list of dispute cases that are displayed a...         NF          F  False
+173  100% of cardmember services representatives sh...         NF          F  False
+
+
+Accuracy (valid responses): 48.6%
+
+
+All Responses:
+pred_label
+F                                        35
+UNKNOWN_RESPONSE_[F] "THE SYSTEM SHAL    22
+UNKNOWN_RESPONSE_[F] "THE PRODUCT SHA    21
+UNKNOWN_RESPONSE_[F] THE PRODUCT SHAL    10
+UNKNOWN_RESPONSE_[F] THE SYSTEM SHALL     7
+UNKNOWN_RESPONSE_[F] "PROGRAM ADMINIS     5
+UNKNOWN_RESPONSE_[F] "THE USER SHALL      4
+UNKNOWN_RESPONSE_[F] "THE ESTIMATOR S     4
+UNKNOWN_RESPONSE_[F] "THE SYSTEM WILL     4
+UNKNOWN_RESPONSE_[NF] "THE SYSTEM SHA     4
+UNKNOWN_RESPONSE_[NF] "SYSTEM AVAILAB     3
+UNKNOWN_RESPONSE_[F] "THE DISPUTES AP     3
+UNKNOWN_RESPONSE_[F] "THE ADJUSTER SH     3
+UNKNOWN_RESPONSE_[F] "THE PRODUCT IS      2
+UNKNOWN_RESPONSE_[F] "ONLY REGISTERED     2
+UNKNOWN_RESPONSE_[F] "REALTOR SHALL B     2
+UNKNOWN_RESPONSE_[F] "THE LOOK AND FE     2
+UNKNOWN_RESPONSE_[F] "100% OF SAVED U     2
+UNKNOWN_RESPONSE_[F] THE CMA REPORT S     2
+UNKNOWN_RESPONSE_[F] "ALL BUSINESS RU     2
+UNKNOWN_RESPONSE_[F] "THE DISPUTES SY     2
+UNKNOWN_RESPONSE_[F] THE DISPUTES APP     2
+UNKNOWN_RESPONSE_[F] "ALL OF THE USER     2
+UNKNOWN_RESPONSE_[F] "90% OF UNTRAINE     2
+UNKNOWN_RESPONSE_[F] THE REQUIREMENT      1
+UNKNOWN_RESPONSE_[F] "THE USER INTERF     1
+UNKNOWN_RESPONSE_[NF] "SEARCH RESULTS     1
+UNKNOWN_RESPONSE_[F] THE REALTOR SHAL     1
+UNKNOWN_RESPONSE_[F] ALL UPDATES TO D     1
+UNKNOWN_RESPONSE_[F] THE DISPUTES SYS     1
+UNKNOWN_RESPONSE_[F] "ALL ACTIONS THA     1
+UNKNOWN_RESPONSE_[NF] "THE APPEARANCE     1
+UNKNOWN_RESPONSE_[F] THE NUMBER OF MI     1
+UNKNOWN_RESPONSE_[F] "IF A USER ACCOU     1
+UNKNOWN_RESPONSE_[F] "ALL ADDITIONS O     1
+UNKNOWN_RESPONSE_[F] "THE SEARCH RADI     1
+UNKNOWN_RESPONSE_[F] "THE SEARCH FOR      1
+UNKNOWN_RESPONSE_[NF] "SEARCH FOR REC     1
+UNKNOWN_RESPONSE_[F] "THE PREFERRED R     1
+UNKNOWN_RESPONSE_[F] THE USER INTERFA     1
+UNKNOWN_RESPONSE_[F] "THE SEARCH RESU     1
+UNKNOWN_RESPONSE_[F] "THE AVAILABLE R     1
+UNKNOWN_RESPONSE_[F] "THE BOTTOM 3/4      1
+UNKNOWN_RESPONSE_[F] EVERY USER OF TH     1
+UNKNOWN_RESPONSE_[NF] "THE SYSTEM MUS     1
+UNKNOWN_RESPONSE_[F] "THE VERBIAGE US     1
+UNKNOWN_RESPONSE_[F] "2 OUT OF 3 PROG     1
+UNKNOWN_RESPONSE_[NF] "RESPONSE TIME      1
+UNKNOWN_RESPONSE_[F] THE SYSTEM WILL      1
+UNKNOWN_RESPONSE_[F] "ALL SCREENS CRE     1
+UNKNOWN_RESPONSE_[F] "100% OF THE CAR     1
+Name: count, dtype: int64
+
+
+Energy used: nan kgCO2
+Average latency: 6.98s
+
+
+Results saved to results/classification_results.csv
