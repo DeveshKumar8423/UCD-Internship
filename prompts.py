@@ -61,114 +61,101 @@ Provide your classification (F/NF):"""
 
 def generate_prompt_variations(base_prompt, text):
     """Generate 9 variations (3 lengths × 3 complexities) for each prompt"""
+    def get_length_type(prompt):
+        length = len(prompt)
+        if length < 500:
+            return "short"
+        elif length <= 3000:
+            return "medium"
+        else:
+            return "long"
+
+    def get_prompt_complexity(prompt):
+        prompt = prompt.lower()
+        if any(term in prompt for term in ["classify", "is this", "f or nf"]):
+            return "low"
+        elif any(term in prompt for term in ["examples", "consider", "analyze"]):
+            return "medium"
+        elif any(term in prompt for term in ["definitions", "comprehensive", "expert"]):
+            return "high"
+        else:
+            return "medium"
+
     variations = []
-    
-    # Short length variations
-    variations.append({
-        'type': 'short',
-        'complexity': 'low',
-        'prompt': f"Classify as F or NF:\n\"{text}\"",
-        'token_count': len(f"Classify as F or NF:\n\"{text}\"".split())
-    })
-    
-    variations.append({
-        'type': 'short',
-        'complexity': 'medium',
-        'prompt': f"Is this functional? (F/NF):\n\"{text}\"",
-        'token_count': len(f"Is this functional? (F/NF):\n\"{text}\"".split())
-    })
-    
-    variations.append({
-        'type': 'short',
-        'complexity': 'high',
-        'prompt': f"Analyze and classify (F/NF):\n\"{text}\"",
-        'token_count': len(f"Analyze and classify (F/NF):\n\"{text}\"".split())
-    })
-    
-    # Medium length variations (original prompt)
+
+    # Short
+    for short_template in [
+        f"Classify as F or NF:\n\"{text}\"",
+        f"Is this functional? (F/NF):\n\"{text}\"",
+        f"Analyze and classify (F/NF):\n\"{text}\""
+    ]:
+        variations.append({
+            'type': get_length_type(short_template),
+            'complexity': get_prompt_complexity(short_template),
+            'prompt': short_template,
+            'token_count': len(short_template.split())
+        })
+
+    # Medium
     med_prompt = base_prompt.format(text=text)
     variations.append({
-        'type': 'medium',
-        'complexity': 'low',
+        'type': get_length_type(med_prompt),
+        'complexity': get_prompt_complexity(med_prompt),
         'prompt': med_prompt,
         'token_count': len(med_prompt.split())
     })
-    
-    # Add medium complexity variation
-    if "Examples:" in med_prompt:
-        medium_complex = med_prompt.replace("Examples:", "Consider these examples:")
-        variations.append({
-            'type': 'medium',
-            'complexity': 'medium',
-            'prompt': medium_complex,
-            'token_count': len(medium_complex.split())
-        })
-    else:
-        variations.append({
-            'type': 'medium',
-            'complexity': 'medium',
-            'prompt': med_prompt,
-            'token_count': len(med_prompt.split())
-        })
-    
-    # Add high complexity medium variation
-    if "Definitions:" in med_prompt:
-        high_complex = med_prompt.replace("Definitions:", "Technical Definitions:")
-        variations.append({
-            'type': 'medium',
-            'complexity': 'high',
-            'prompt': high_complex,
-            'token_count': len(high_complex.split())
-        })
-    else:
-        variations.append({
-            'type': 'medium',
-            'complexity': 'high',
-            'prompt': med_prompt + "\nProvide detailed reasoning.",
-            'token_count': len((med_prompt + "\nProvide detailed reasoning.").split())
-        })
-    
-    # Long length variations
-    long_base = f"""Please carefully analyze this software requirement and classify it as either Functional (F) or Non-Functional (NF). 
+
+    # Slight modifications for variation
+    medium_variation_1 = med_prompt.replace("Examples:", "Consider these examples:")
+    variations.append({
+        'type': get_length_type(medium_variation_1),
+        'complexity': get_prompt_complexity(medium_variation_1),
+        'prompt': medium_variation_1,
+        'token_count': len(medium_variation_1.split())
+    })
+
+    medium_variation_2 = med_prompt.replace("Definitions:", "Technical Definitions:") if "Definitions:" in med_prompt else med_prompt + "\nProvide detailed reasoning."
+    variations.append({
+        'type': get_length_type(medium_variation_2),
+        'complexity': get_prompt_complexity(medium_variation_2),
+        'prompt': medium_variation_2,
+        'token_count': len(medium_variation_2.split())
+    })
+
+    # Long
+    long_prompts = [
+        f"""Please carefully analyze this software requirement and classify it as either Functional (F) or Non-Functional (NF). 
 Consider all aspects of the requirement before making your determination.
 
-Requirement: "{text}"
+Requirement: \"{text}\"
 
-After your analysis, please provide your final classification as either F or NF on a new line."""
-    
-    variations.append({
-        'type': 'long',
-        'complexity': 'low',
-        'prompt': long_base,
-        'token_count': len(long_base.split())
-    })
-    
-    # Medium complexity long variation
-    med_complex_long = long_base.replace("analyze", "thoroughly examine and analyze")
-    variations.append({
-        'type': 'long',
-        'complexity': 'medium',
-        'prompt': med_complex_long,
-        'token_count': len(med_complex_long.split())
-    })
-    
-    # High complexity long variation
-    high_complex_long = f"""As a requirements engineering expert, perform a comprehensive analysis of this requirement:
+After your analysis, please provide your final classification as either F or NF on a new line.""",
+
+        f"""Please thoroughly examine and analyze the following software requirement:
+
+Requirement: \"{text}\"
+
+Provide your classification (F/NF) after your analysis.""",
+
+        f"""As a requirements engineering expert, perform a comprehensive analysis of this requirement:
 
 1. First, identify key components
 2. Then, evaluate functional vs non-functional aspects
 3. Finally, provide classification
 
-Requirement: "{text}"
+Requirement: \"{text}\"
 
 Detailed Analysis:"""
-    variations.append({
-        'type': 'long',
-        'complexity': 'high',
-        'prompt': high_complex_long,
-        'token_count': len(high_complex_long.split())
-    })
-    
+    ]
+
+    for long_prompt in long_prompts:
+        variations.append({
+            'type': get_length_type(long_prompt),
+            'complexity': get_prompt_complexity(long_prompt),
+            'prompt': long_prompt,
+            'token_count': len(long_prompt.split())
+        })
+
     return variations
 
 def count_tokens(text):
